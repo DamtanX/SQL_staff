@@ -22,7 +22,8 @@ WHERE
     job_title_short = 'Data Analyst' AND
     job_work_from_home = true
 ORDER BY 
-    salary_year_avg DESC
+    salary_year_avg DESC,
+    job_id
 LIMIT 15
 
 /*

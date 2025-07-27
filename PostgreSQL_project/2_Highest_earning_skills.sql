@@ -28,20 +28,24 @@ WITH highest_paying_roles AS (
         job_title_short = 'Data Analyst' AND
         job_work_from_home = true
     ORDER BY 
-    salary_year_avg DESC
+    salary_year_avg DESC,
+    job_id
     LIMIT 15
 )
 
 SELECT  
     skills_dim.skills,
-    COUNT(skills) AS skill_count,
-    ROUND(AVG(highest_paying_roles.Salary_Yearly), 0) AS Salary_Yearly
+    COUNT(skills_dim.skills) AS skill_count,
+    ROUND(AVG(highest_paying_roles.Salary_Yearly), 0) AS Salary_Yearly,
+    skills_dim.type
 FROM 
     highest_paying_roles
 INNER JOIN skills_job_dim ON highest_paying_roles.job_id = skills_job_dim.job_id
 INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 GROUP BY 
+    skills_dim.type,
     skills_dim.skills
+    
 ORDER BY 
     skill_count DESC
 

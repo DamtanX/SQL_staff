@@ -15,7 +15,8 @@ earning potential, helping professionals prioritize the most strategic skills fo
 SELECT
     skills_dim.skills,
     ROUND(AVG(job_postings_fact.salary_year_avg), 0) AS salary_yearly,
-    COUNT(job_postings_fact.job_id) AS skill_count
+    COUNT(job_postings_fact.job_id) AS skill_count,
+    skills_dim.type
 FROM 
     job_postings_fact
 INNER JOIN skills_job_dim ON job_postings_fact.job_id = skills_job_dim.job_id
@@ -25,9 +26,10 @@ WHERE
     job_postings_fact.job_work_from_home = true AND
     job_postings_fact.salary_year_avg IS NOT NULL
 GROUP BY
-    skills_dim.skills
+    skills_dim.skills,
+    skills_dim.type
 HAVING
-    COUNT(job_postings_fact.job_id) > 10
+    COUNT(job_postings_fact.job_id) > 25
 ORDER BY 
     salary_yearly DESC
 LIMIT 50
@@ -36,13 +38,13 @@ LIMIT 50
 
 Highest-Impact Skills for Data Analysts, Insights: 
 
-        • Go ($115K), Confluence ($114K), and Hadoop ($113K) top the list, though with 
-        relatively low usage counts — suggesting niche but highly lucrative skills.
+    • Go stands out as the highest-paying skill ($115,320),
+     followed by Snowflake ($112,948), and Azure ($111,225).
 
-        • Snowflake ($113K, 37 jobs) and Azure ($111K, 34 jobs) stand out for combining
-         both high salaries and decent demand, making them strategic skills to learn.
+    • These are mostly cloud and programming technologies, 
+    reflecting high demand in modern data infrastructure.
 
-        • Python ($101K, 236) and Tableau ($99K, 230) appear frequently while still 
-        offering solid pay — a great balance of popularity and profitability.
-
+    • All cloud-related skills (Snowflake, Azure, AWS, Oracle) 
+    have salaries over $100,000, confirming the strong value of 
+    cloud expertise in today's job market.
 */
