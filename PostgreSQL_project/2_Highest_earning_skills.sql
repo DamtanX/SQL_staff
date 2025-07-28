@@ -60,8 +60,7 @@ Top Skills in High-Paying Data Analyst Jobs (2023) Insights:
     • Tableau and R also appear prominently, emphasizing the need for data visualization 
     and statistical analysis tools.
 
-    • Skills like PowerPoint, PySpark, and Jupyter are linked to average
-     annual salaries exceeding $255K, though they appear less frequently (only once each). 
-     This suggests these tools may be used in more specialized, high-paying roles.
+    • AWS leads with the highest average salary ($222K), followed by Databricks ($213K) 
+    and Oracle ($203K), highlighting the importance of cloud platforms in modern data environments.
      
 */

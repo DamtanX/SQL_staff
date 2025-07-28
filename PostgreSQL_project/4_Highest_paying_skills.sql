@@ -12,7 +12,7 @@ What are the highest-paying skills for Data Analysts?
 
 SELECT  
     skills_dim.skills,
-    ROUND(AVG(salary_year_avg), 0) AS skill_count
+    ROUND(AVG(salary_year_avg), 0) AS skill_salary
 FROM 
     job_postings_fact
 INNER JOIN skills_job_dim ON job_postings_fact.job_id = skills_job_dim.job_id
@@ -22,7 +22,7 @@ WHERE
         salary_year_avg IS NOT NULL
 GROUP BY
     skills_dim.skills
-ORDER BY skill_count DESC
+ORDER BY skill_salary DESC
 LIMIT 30
 
 
