@@ -1,5 +1,12 @@
 # Contents
 
+### sql_load
+Whole folder and SQL files there were provided by Luke Barrouse during his online course.
+Contains all code for configuration your starting bd to start execute queries.
+Use your own path for each query.
+Nothing was changed by me.
+Reference: https://github.com/lukebarousse/SQL_Project_Data_Job_Analysis/tree/main
+
 ### visualization.ipynb
 This file showcases visualizations based on queries I developed in my PostgreSQL notebooks. 
 For a detailed look at how I executed these queries using Python, check out my full project on GitHub: [My_Python_Data_Analytics_Project](https://github.com/DamtanX/My_Python_Data_Analytics_Project)
