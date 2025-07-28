@@ -334,6 +334,9 @@ Throughout this journey, I’ve supercharged my **SQL** skills with powerful new
 
 • **Visualization with Python:** While **SQL** was the core focus of this project, I used **Python** libraries like **Matplotlib, Pandas, and Seaborn** to visualize the results. A full breakdown of the **Python** side is beyond this scope, but you can check out the detailed **Python** review here: [My_Python_Data_Analytics_Project](https://github.com/DamtanX/My_Python_Data_Analytics_Project).
 
+# Special Thanks
+I would like to extend my sincere thanks to Luke Barousse for offering a comprehensive Data Analyst course and sharing a rich dataset with his subscribers, including myself. His content was instrumental in building my understanding of SQL's role in Data Analysis and served as the foundation for this project. I also want to acknowledge ChatGPT, which provided valuable support and guidance throughout the development of this project.
+
 # Conclusion
 
 This project offered a deep dive into the **Data Analyst** job market, uncovering valuable insights into salaries, skill demand, and the tools that drive success in the field. Through rigorous **SQL** querying and thoughtful data exploration, I identified not only the **top-paying roles** but also the most **in-demand and high-impact skills** that aspiring analysts should focus on.
